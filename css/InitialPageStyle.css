@@ -26,7 +26,7 @@
     font-size : 80px;
     font-weight: bold;
     font-family: "statFont";
-    display: felx;
+    display: flex;
     position: relative;
     left : 50%;
     bottom :50%;
