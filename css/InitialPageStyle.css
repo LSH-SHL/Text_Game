@@ -29,8 +29,9 @@
     display: flex;
     position: relative;
     left: 50%;
-    bottom: 50%;
+    top: 50%;
+    transform:translateX(-50%);
+    transform:translateY(-50%);
     margin-top: 40px;
     padding-bottom: 25px;
-    border-bottom: 1px solid rgba(196, 196, 196, 0.653); }
 }
