@@ -28,8 +28,8 @@
     font-family: "statFont";
     display: flex;
     position: relative;
-    left: 50%;
-    top: 50%;
+    left: 45%;
+    height: 130px ; display: table-cell; vertical-align: middle;
     /*transform:translateX(-50%);
     //transform:translateY(-50%);*/
     margin-top: 40px;
