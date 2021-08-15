@@ -13,15 +13,16 @@
 
 <script type="text/javascript">
 function onNewIDbox(){
- document.getElementById("t_space").innerHTML +=
- "<input type='text' name='tbox' ><br>";
+ document.getElementById("NewGame").innerHTML += "<input type='text' name='tbox' ><br>";
 }	
     
 </script>	
 	
 <body bgcolor="black">
     <div class="title">GAME</div>
-    <button type="button" onclick="onNewIDbox()">시작하기</button>
+    <div id="NewGame">
+    	<button type="button" onclick="onNewIDbox()">시작하기</button>
+    </div>
     <br><br><br>
     <button type="button" onclick="onIDbox()">이어하기</button>
 </body>
