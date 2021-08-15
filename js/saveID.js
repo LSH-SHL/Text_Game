@@ -38,7 +38,7 @@ $('#google-submit').click(function () {
     type: "GET",
     url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
     data: {
-      "이름": inputID.val(),
+      "ID": inputID.val(),
     },
     success: function (response) {
       isLoading(false);
