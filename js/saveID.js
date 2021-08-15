@@ -2,7 +2,7 @@ var inputs = $('input[type="text"]');
 var googleSubmitBtn = $('#google-submit');
 var snackbar = $('#snackbar');
 
-var inputID = $('#name');
+var inputID = $('#ID');
 
 function isLoading(status){
   if(status){
