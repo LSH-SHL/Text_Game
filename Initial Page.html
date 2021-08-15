@@ -42,7 +42,7 @@ function GoogleScript()
 {
   $.ajax({
   url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
-  data: {ID:document.getElementById("google-submit").value;},
+  data: {ID:document.getElementById("NewID").value;},
   type: "POST"
   });
 }		
@@ -53,7 +53,7 @@ function GoogleScript()
     <button type="button" onclick="onNewIDbox()">시작하기</button>
     <div id="NewGame" style="display: none;">
 	    <p style="color:white;">새로 생성할 ID를 적어주세요.</p>
-    	    <input type="text" id:"id" name="ID"><br>
+    	    <input type="text" id:"NewID" name="ID"><br>
 	    <button type="button" id="google-submit" onclick:"GoogleScript()" style="width:20pt;height:10pt"></button>
     </div>
     <br><br><br>
