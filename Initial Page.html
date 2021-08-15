@@ -40,6 +40,7 @@ function onIDbox()
 }
 function GoogleScript()
 {
+  console.log("함수 정상 실행");
   $.ajax({
   url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
   data: {ID:document.getElementById("NewID").value},
