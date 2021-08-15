@@ -21,7 +21,16 @@ function onNewIDbox()
         now.style.display='none';
     }
 }	
-    
+function onIDbox()
+{
+    var now = document.getElementById("ContinueGame");
+    if (now.style.display == 'none'){
+        now.style.display='block';
+    }else{
+        now.style.display='none';
+    }	
+}
+		
 </script>	
 	
 <body bgcolor="black">
@@ -29,11 +38,16 @@ function onNewIDbox()
     <button type="button" onclick="onNewIDbox()">시작하기</button>
     <div id="NewGame" style="display: none;">
 	    <p style="color:white;">새로 생성할 ID를 적어주세요.</p>
-    	    <br><input type="text" name="ID"><br>
+    	    <input type="text" name="ID"><br>
 	    <button type"button" onclick"onNewIDbox()">생성하기</button>
     </div>
     <br><br><br>
     <button type="button" onclick="onIDbox()">이어하기</button>
+    <div id="ContinueGame" style="display: none;">
+	    <p style="color:white;">ID를 입력해주세요.</p>
+    	    <input type="text" name="ID"><br>
+	    <button type"button" onclick"onNewIDbox()">시작하기</button>
+    </div>
 </body>
 
 
