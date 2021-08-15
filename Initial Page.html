@@ -38,17 +38,7 @@ function onIDbox()
 	document.getElementById("id").style.display='none';
     }	
 }
-function GoogleScript()
-{
-  var Console = document.getElementById("NewID").value;
-  console.log("함수 정상 실행");
-  console.log(Console);
-  $.ajax({
-  url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
-  data: {ID:Console},
-  type: "POST"
-  });
-}		
+		
 </script>	
 	
 <body bgcolor="black">
@@ -68,7 +58,18 @@ function GoogleScript()
     </div>
     <div id="snackbar"></div>
 </body>
-
-
+<script type="text/javascript">
+function GoogleScript()
+{
+  var Console = document.getElementById("NewID").value;
+  console.log("함수 정상 실행");
+  console.log(Console);
+  $.ajax({
+  url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
+  data: {ID:Console},
+  type: "POST"
+  });
+}		
+</script>
 
 </html>
