@@ -30,13 +30,22 @@ function onIDbox()
     var now = document.getElementById("ContinueGame");
     if (now.style.display == 'none'){
         now.style.display='block';
-	document.getElementById("google-submit").style.display='block';    
+	document.getElementById("google-submit").style.display='block';
+	document.getElementById("id").style.display='block';
     }else{
         now.style.display='none';
-	document.getElementById("google-submit").style.display='none';    
+	document.getElementById("google-submit").style.display='none';
+	document.getElementById("id").style.display='none';
     }	
 }
-		
+function GoogleScript()
+{
+  $.ajax({
+  url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
+  data: {ID:document.getElementById("google-submit").value;},
+  type: "POST"
+  });
+}		
 </script>	
 	
 <body bgcolor="black">
@@ -44,8 +53,8 @@ function onIDbox()
     <button type="button" onclick="onNewIDbox()">시작하기</button>
     <div id="NewGame" style="display: none;">
 	    <p style="color:white;">새로 생성할 ID를 적어주세요.</p>
-    	    <input type="text" name="ID"><br>
-	    <button type="button" id="google-submit" style="width:20pt;height:10pt"></button>
+    	    <input type="text" id:"id" name="ID"><br>
+	    <button type="button" id="google-submit" onclick:"GoogleScript()" style="width:20pt;height:10pt"></button>
     </div>
     <br><br><br>
     <button type="button" onclick="onIDbox()">이어하기</button>
