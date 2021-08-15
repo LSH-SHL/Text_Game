@@ -33,28 +33,10 @@ $('#google-submit').click(function () {
 
   // 입력중..
   isLoading(true);
-
   $.ajax({
-    type: "GET",
-    url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
-    data: {
-      "ID": inputID.val(),
-    },
-    success: function (response) {
-      isLoading(false);
-
-      snackbar.html('입력이 완료됐습니다.').addClass('show');
-      setTimeout(function () {
-        snackbar.removeClass('show');
-      }, 3000);
-
-      //값 비워주기
-      inputID.val('');
-    },
-    error: function (request, status, error) {
-      isLoading(false);
-      console.log("code:" + request.status + "\n" + "error:" + error);
-      console.log(request.responseText);
-    }
+  url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
+  data: {ID:inputID.val()},
+  type: "POST"
   });
+
 });
