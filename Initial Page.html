@@ -27,8 +27,10 @@ function onNewIDbox()
 <body bgcolor="black">
     <div class="title">GAME</div>
     <button type="button" onclick="onNewIDbox()">시작하기</button>
-    <div>
-    	<input type="text" style="display: none;" id="NewGame" name="ID">
+    <div id="NewGame" style="display: none;">
+	    <p style="color:white;">새로 생성할 ID를 적어주세요.</p>
+    	    <br><input type="text" name="ID"><br>
+	    <button type"button" onclick"onNewIDbox()">생성하기</button>
     </div>
     <br><br><br>
     <button type="button" onclick="onIDbox()">이어하기</button>
