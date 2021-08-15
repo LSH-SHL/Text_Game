@@ -12,8 +12,14 @@
 </head>
 
 <script type="text/javascript">
-function onNewIDbox(){
- document.getElementById("NewGame").innerHTML += "<input type='text' name='tbox' ><br>";
+function onNewIDbox()
+{
+    var now = document.getElementById("NewGame");
+    if (now.style.display == 'none'){
+        now.style.display='block';
+    }else{
+        now.style.display='none';
+    }
 }	
     
 </script>	
@@ -21,7 +27,7 @@ function onNewIDbox(){
 <body bgcolor="black">
     <div class="title">GAME</div>
     <div id="NewGame">
-    	<button type="button" onclick="onNewIDbox()">시작하기</button>
+    	<button type="button" style="display: none;" onclick="onNewIDbox()">시작하기</button>
     </div>
     <br><br><br>
     <button type="button" onclick="onIDbox()">이어하기</button>
