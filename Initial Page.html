@@ -80,7 +80,7 @@ function GoogleScript()
 }	
 
 async function Discrimination(){
-    const NEWID = document.getElementsById('NewID');
+    const NEWID = document.getElementById("NewID").value;
     consloe.log(NEWID);
 	const SOURCE = 'https://spreadsheets.google.com/feeds/list/1mAh5qXzA5oTbe0HC7EznSr9C6nnkO54AlUo2cDJKiPY/1/public/full?alt=json';
 	const COLUMNS = ['ID', 'Nickname', 'Level', 'Experience', 'Money', 'HP', 'MP', 'FP', 'Attack', 'Defense', 'Dodge', 'CriticalDamage', 'Critical', 'BossDamage'];
