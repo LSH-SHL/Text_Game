@@ -84,7 +84,7 @@ async function Discrimination(){
     console.log(NEWID);
     const SOURCE = 'https://spreadsheets.google.com/feeds/list/1mAh5qXzA5oTbe0HC7EznSr9C6nnkO54AlUo2cDJKiPY/1/public/full?alt=json';
     const COLUMNS = ['ID', 'Nickname', 'Level', 'Experience', 'Money', 'HP', 'MP', 'FP', 'Attack', 'Defense', 'Dodge', 'CriticalDamage', 'Critical', 'BossDamage'];
-	
+    consloe.log(SOURCE);	
     const DATA = await separateRowFromJson(SOURCE, COLUMNS);
     for (let i = 0; i < DATA.length;i++)
     {
