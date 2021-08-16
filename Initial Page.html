@@ -57,7 +57,10 @@ function onIDbox()
     </div>
     <div id="snackbar"></div>
 </body>
+
 <script type="text/javascript">
+window.addEventListener('DOMContentLoaded', main);
+
 function GoogleScript()
 {
   var Console = document.getElementById("NewID").value;
@@ -78,6 +81,7 @@ function GoogleScript()
 
 async function Discrimination(){
     const NEWID = document.getElementsById('NewID');
+    consloe.log(NEWID);
 	const SOURCE = 'https://spreadsheets.google.com/feeds/list/1mAh5qXzA5oTbe0HC7EznSr9C6nnkO54AlUo2cDJKiPY/1/public/full?alt=json';
 	const COLUMNS = ['ID', 'Nickname', 'Level', 'Experience', 'Money', 'HP', 'MP', 'FP', 'Attack', 'Defense', 'Dodge', 'CriticalDamage', 'Critical', 'BossDamage'];
 	
