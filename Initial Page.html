@@ -61,10 +61,12 @@ function onIDbox()
 <script type="text/javascript">
 window.addEventListener('DOMContentLoaded', Discrimination);
 
-function GoogleScript()
+async function GoogleScript()
 {
   var Console = document.getElementById("NewID").value;
-  if (Discrimination() == 1)
+  var Value = await Discrimination();
+  console.log(Value);
+  if (Value == 1)
   {
       $.ajax({
       url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
