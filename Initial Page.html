@@ -61,11 +61,51 @@ function onIDbox()
 function GoogleScript()
 {
   var Console = document.getElementById("NewID").value;
-  $.ajax({
-  url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
-  data: {ID:Console},
-  type: "POST"
-  });
+  if (Discrimination() == 1)
+  {
+      $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbyI2qcgqnxd1lXbD4uKdfOpQTCmynjFAfqKqPXWnWjCymg5Ps3YigqFfrmofaq22X3Y8A/exec",
+      data: {ID:Console},
+      type: "POST"
+      });
+      alert("아이디 생성이 완료되었습니다.");
+  }
+  else
+  {
+      alert("해당 아이디는 이용 중입니다.");
+  }
+}	
+
+async function Discrimination(){
+    const NEWID = document.getElementsById('NewID');
+	const SOURCE = 'https://spreadsheets.google.com/feeds/list/1mAh5qXzA5oTbe0HC7EznSr9C6nnkO54AlUo2cDJKiPY/1/public/full?alt=json';
+	const COLUMNS = ['ID', 'Nickname', 'Level', 'Experience', 'Money', 'HP', 'MP', 'FP', 'Attack', 'Defense', 'Dodge', 'CriticalDamage', 'Critical', 'BossDamage'];
+	
+	const DATA = await separateRowFromJson(SOURCE, COLUMNS);
+    for (let i = 0; i < DATA.length;i++)
+    {
+        if (NEWID == DATA[i]['ID'])
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+async function separateRowFromJson(SOURCE, COLUMNS){
+	const FETCHED_SOURCE = await fetch(SOURCE);
+  	let temp = await FETCHED_SOURCE.json();
+ 	temp = temp['feed']['entry'];
+
+	let _DATA = [];
+	for(var i=0; i<Object.keys(temp).length; i++){
+		_DATA[i]={};
+		for(var k=0; k<Object.keys(COLUMNS).length; k++){;
+			_DATA[i][COLUMNS[k]] = temp[i]['gsx$'+COLUMNS[k]]['$t'];
+		}
+	}
+	
+	return _DATA;
 }		
 </script>
 
