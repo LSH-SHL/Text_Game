@@ -65,7 +65,7 @@ function GoogleScript()
 {
   var Console = document.getElementById("NewID").value;
   console.log(Console);
-  var Value = myFunction(Console);
+  var Value = ajaxReturnDATA(Console);
   if (Value == 1)
   {
       $.ajax({
@@ -81,6 +81,25 @@ function GoogleScript()
   }
 }	
 
+
+function ajaxReturnDATA(Console)
+{
+    vat Result;
+    
+    $.ajax({
+        type : "post"
+        ,url : "https://script.google.com/macros/s/AKfycby-ze05RZPGafy9WF8kwCwfAAiWBhxr0j_3Nf3t8GnztnLdQZq4D6z-PywJPLc8Uvsq/exec"
+        ,data : Console
+	,dataType : "json"
+        ,async : false
+        success: function(Console,textStatus){
+            Result = Console;
+        }
+    });
+    console.log("Success!!");
+    return Result;
+}
+	
 </script>
 
 </html>
