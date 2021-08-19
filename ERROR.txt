@@ -1,0 +1,13 @@
+<!--jquery.min.js:4 [Deprecation] Synchronous XMLHttpRequest on the main thread is deprecated because of its detrimental effects to the end user's experience. For more help, check https://xhr.spec.whatwg.org/.
+send @ jquery.min.js:4
+ajax @ jquery.min.js:4
+ajaxReturnDATA @ Initial Page.html:89
+GoogleScript @ Initial Page.html:68
+onclick @ Initial Page.html:50
+jquery.min.js:4 Access to XMLHttpRequest at 'https://script.google.com/macros/s/AKfycby-ze05RZPGafy9WF8kwCwfAAiWBhxr0j_3Nf3t8GnztnLdQZq4D6z-PywJPLc8Uvsq/exec' from origin 'https://lsh-shl.github.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+send @ jquery.min.js:4
+ajax @ jquery.min.js:4
+ajaxReturnDATA @ Initial Page.html:89
+GoogleScript @ Initial Page.html:68
+onclick @ Initial Page.html:50
+jquery.min.js:4 POST https://script.google.com/macros/s/AKfycby-ze05RZPGafy9WF8kwCwfAAiWBhxr0j_3Nf3t8GnztnLdQZq4D6z-PywJPLc8Uvsq/exec net::ERR_FAILED-->
