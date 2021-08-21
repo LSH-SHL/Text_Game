@@ -85,7 +85,7 @@ function GoogleScript()
 function convertToCorsUrl(url){
 
 var protocol = (window.location.protocol === 'http:' ? 'http:' : 'https:');
-
+console.log("Convert10");
 return protocol + '//cors-anywhere.herokuapp.com/' + url;
 
 }
@@ -95,7 +95,8 @@ function ajaxReturnDATA(Console)
 {
     var Result;
     var URL = "https://script.google.com/macros/s/AKfycby-ze05RZPGafy9WF8kwCwfAAiWBhxr0j_3Nf3t8GnztnLdQZq4D6z-PywJPLc8Uvsq/exec";
-    URL = convertToCorsUrl(URL);	
+    URL = convertToCorsUrl(URL);
+    console.log(URL);
     $.ajax({
         type : "post"
 	,contentType: "application/x-www-form-urlencoded; charset=UTF-8"
