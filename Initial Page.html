@@ -65,6 +65,7 @@ function onIDbox()
 function GoogleScript()
 {
   var Console = document.getElementById("NewID").value;
+  ConsoleDATA();
   console.log(Console);
   var Value = ajaxReturnDATA(Console);
   if (Value == 1)
